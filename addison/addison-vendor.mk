@@ -25,8 +25,6 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/addison/proprietary/vendor/firmware/marley-dsp1-ultrasound.wmfw:$(TARGET_COPY_OUT_VENDOR)/firmware/marley-dsp1-ultrasound.wmfw \
     vendor/motorola/addison/proprietary/vendor/firmware/marley-dsp2-aov-frontend.wmfw:$(TARGET_COPY_OUT_VENDOR)/firmware/marley-dsp2-aov-frontend.wmfw \
     vendor/motorola/addison/proprietary/vendor/firmware/marley-dsp3-aov-control.wmfw:$(TARGET_COPY_OUT_VENDOR)/firmware/marley-dsp3-aov-control.wmfw \
-    vendor/motorola/addison/proprietary/vendor/firmware/synaptics-s3508-16082601-255c40-addison.tdat:$(TARGET_COPY_OUT_VENDOR)/firmware/synaptics-s3508-16082601-255c40-addison.tdat \
-    vendor/motorola/addison/proprietary/vendor/firmware/synaptics-s3508sga-16082601-255c40-addison.tdat:$(TARGET_COPY_OUT_VENDOR)/firmware/synaptics-s3508sga-16082601-255c40-addison.tdat \
     vendor/motorola/addison/proprietary/lib/com.motorola.mod@1.0.so:system/lib/com.motorola.mod@1.0.so \
     vendor/motorola/addison/proprietary/lib/lib_motsensorlistener.so:system/lib/lib_motsensorlistener.so \
     vendor/motorola/addison/proprietary/lib/lib_mottof.so:system/lib/lib_mottof.so \
