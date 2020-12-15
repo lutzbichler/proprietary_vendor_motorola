@@ -1,5 +1,5 @@
 # Copyright (C) 2014-2016 The CyanogenMod Project
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2017-2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -38,7 +38,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/shamu/proprietary/bin/radish:system/bin/radish \
     vendor/motorola/shamu/proprietary/bin/sensors.qcom:system/bin/sensors.qcom \
     vendor/motorola/shamu/proprietary/bin/tcmd_mini:system/bin/tcmd_mini \
-    vendor/motorola/shamu/proprietary/bin/thermal-engine:system/bin/thermal-engine \
+    vendor/motorola/shamu/proprietary/bin/thermal-engine:system/vendor/bin/thermal-engine \
     vendor/motorola/shamu/proprietary/bin/time_daemon:system/bin/time_daemon \
     vendor/motorola/shamu/proprietary/bin/usbhub:system/bin/usbhub \
     vendor/motorola/shamu/proprietary/bin/usbhub_init:system/bin/usbhub_init \
@@ -75,7 +75,6 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/shamu/proprietary/etc/firmware/vpu.mbn:system/etc/firmware/vpu.mbn \
     vendor/motorola/shamu/proprietary/etc/firmware/vpu.mdt:system/etc/firmware/vpu.mdt \
     vendor/motorola/shamu/proprietary/etc/flp.conf:system/etc/flp.conf \
-    vendor/motorola/shamu/proprietary/etc/fmas_eq.dat:system/etc/fmas_eq.dat \
     vendor/motorola/shamu/proprietary/etc/permissions/com.android.omadm.service.xml:system/etc/permissions/com.android.omadm.service.xml \
     vendor/motorola/shamu/proprietary/etc/permissions/com.motorola.DirectedSMSProxy.xml:system/etc/permissions/com.motorola.DirectedSMSProxy.xml \
     vendor/motorola/shamu/proprietary/etc/permissions/com.motorola.triggerenroll.xml:system/etc/permissions/com.motorola.triggerenroll.xml \
@@ -87,10 +86,8 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/shamu/proprietary/etc/permissions/rcsservice.xml:system/etc/permissions/rcsservice.xml \
     vendor/motorola/shamu/proprietary/etc/sensors/sensor_def_qcomdev.conf:system/etc/sensors/sensor_def_qcomdev.conf \
     vendor/motorola/shamu/proprietary/etc/sysconfig/whitelist_com.android.omadm.service.xml:system/etc/sysconfig/whitelist_com.android.omadm.service.xml \
-    vendor/motorola/shamu/proprietary/etc/thermal-engine-shamu.conf:system/etc/thermal-engine-shamu.conf \
     vendor/motorola/shamu/proprietary/lib/hw/audio.motvr.default.so:system/lib/hw/audio.motvr.default.so \
-    vendor/motorola/shamu/proprietary/lib/hw/gps.msm8084.so:system/lib/hw/gps.msm8084.so \
-    vendor/motorola/shamu/proprietary/lib/hw/sound_trigger.primary.shamu.so:system/lib/hw/sound_trigger.primary.shamu.so \
+    vendor/motorola/shamu/proprietary/vendor/lib/hw/sound_trigger.primary.shamu.so:system/vendor/lib/hw/sound_trigger.primary.shamu.so \
     vendor/motorola/shamu/proprietary/lib/libadspd-jni.so:system/lib/libadspd-jni.so \
     vendor/motorola/shamu/proprietary/lib/libadspd.so:system/lib/libadspd.so \
     vendor/motorola/shamu/proprietary/lib/libdetectmodem.so:system/lib/libdetectmodem.so \
@@ -99,20 +96,16 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/shamu/proprietary/lib/libdmjavaplugin.so:system/lib/libdmjavaplugin.so \
     vendor/motorola/shamu/proprietary/priv-app/DMService/lib/arm/libdmjavaplugin.so:system/priv-app/DMService/lib/arm/libdmjavaplugin.so \
     vendor/motorola/shamu/proprietary/lib/libflacencoder.so:system/lib/libflacencoder.so \
-    vendor/motorola/shamu/proprietary/lib/libgps.utils.so:system/lib/libgps.utils.so \
     vendor/motorola/shamu/proprietary/lib/libimscamera_jni.so:system/lib/libimscamera_jni.so \
     vendor/motorola/shamu/proprietary/app/ims/lib/arm/libimscamera_jni.so:system/app/ims/lib/arm/libimscamera_jni.so \
     vendor/motorola/shamu/proprietary/lib/libimsmedia_jni.so:system/lib/libimsmedia_jni.so \
     vendor/motorola/shamu/proprietary/app/ims/lib/arm/libimsmedia_jni.so:system/app/ims/lib/arm/libimsmedia_jni.so \
-    vendor/motorola/shamu/proprietary/lib/libloc_core.so:system/lib/libloc_core.so \
-    vendor/motorola/shamu/proprietary/lib/libloc_eng.so:system/lib/libloc_eng.so \
     vendor/motorola/shamu/proprietary/lib/libmdmdetect.so:system/lib/libmdmdetect.so \
     vendor/motorola/shamu/proprietary/lib/libmotaudioutils.so:system/lib/libmotaudioutils.so \
     vendor/motorola/shamu/proprietary/lib/librecoglib.so:system/lib/librecoglib.so \
     vendor/motorola/shamu/proprietary/lib/libsupermodel.so:system/lib/libsupermodel.so \
     vendor/motorola/shamu/proprietary/lib/libtrainingcheck.so:system/lib/libtrainingcheck.so \
-    vendor/motorola/shamu/proprietary/lib/soundfx/libfmas.so:system/lib/soundfx/libfmas.so \
-    vendor/motorola/shamu/proprietary/lib/soundfx/libspeakerbundle.so:system/lib/soundfx/libspeakerbundle.so \
+    vendor/motorola/shamu/proprietary/vendor/lib/soundfx/libspeakerbundle.so:system/vendor/lib/soundfx/libspeakerbundle.so \
     vendor/motorola/shamu/proprietary/vendor/firmware/VRGain.bin:system/vendor/firmware/VRGain.bin \
     vendor/motorola/shamu/proprietary/vendor/firmware/a420_pfp.fw:system/vendor/firmware/a420_pfp.fw \
     vendor/motorola/shamu/proprietary/vendor/firmware/a420_pm4.fw:system/vendor/firmware/a420_pm4.fw \
@@ -352,6 +345,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/shamu/proprietary/vendor/lib/liboemcrypto.so:system/vendor/lib/liboemcrypto.so \
     vendor/motorola/shamu/proprietary/vendor/lib/libois_lc898122.so:system/vendor/lib/libois_lc898122.so \
     vendor/motorola/shamu/proprietary/vendor/lib/libqcci_legacy.so:system/vendor/lib/libqcci_legacy.so \
+    vendor/motorola/shamu/proprietary/vendor/lib/libqc-opt.so:system/vendor/lib/libqc-opt.so \
     vendor/motorola/shamu/proprietary/vendor/lib/libqdi.so:system/vendor/lib/libqdi.so \
     vendor/motorola/shamu/proprietary/vendor/lib/libqdp.so:system/vendor/lib/libqdp.so \
     vendor/motorola/shamu/proprietary/vendor/lib/libqmi.so:system/vendor/lib/libqmi.so \
